@@ -8,4 +8,6 @@ if (php_sapi_name() === 'cli-server' && is_file($filename)) {
 
 require __DIR__ . '/../vendor/autoload.php';
 
-require __DIR__ . '/../src/app.php';
+// require __DIR__ . '/../src/app.php';
+
+
