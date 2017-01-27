@@ -27,4 +27,5 @@ $twig = new Twig_Environment($loader);
 
 // echo $twig->render('interpolacao.html.twig', [name=>'Marcos Barbosa', 'escola'=>'School Of Net']);
 // echo $twig->render('variaveis.html.twig', [name=>'Marcos Barbosa', 'escola'=>'School Of Net']);
-echo $twig->render('operadores.html.twig', [name=>'Marcos Barbosa', 'escola'=>'School Of Net']);
+// echo $twig->render('operadores.html.twig', [name=>'Marcos Barbosa', 'escola'=>'School Of Net']);
+echo $twig->render('arrays.html.twig', [name=>'Marcos Barbosa', 'escola'=>'School Of Net']);
