@@ -25,4 +25,6 @@ $loader = new Twig_Loader_Filesystem(__DIR__.'/../twig_templates');
 $twig = new Twig_Environment($loader);
 
 
-echo $twig->render('index.html.twig', [name=>'Marcos Barbosa', 'escola'=>'School Of Net']);
+// echo $twig->render('interpolacao.html.twig', [name=>'Marcos Barbosa', 'escola'=>'School Of Net']);
+// echo $twig->render('variaveis.html.twig', [name=>'Marcos Barbosa', 'escola'=>'School Of Net']);
+echo $twig->render('operadores.html.twig', [name=>'Marcos Barbosa', 'escola'=>'School Of Net']);
