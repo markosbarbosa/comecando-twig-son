@@ -1,5 +1,36 @@
-<p>Olá {{ name }}</p>
-<p>{{ true }} - {{ false }}</p>
-<p>{{ escola ~ ' - ' ~ name }}</p>
-<p>{{ 2 + 2 }}</p>
-<p>{{ "Marcos" ~ " Barbosa"}}</p>
+{% set name = 'Marcos Barbosa' %}
+{% set num = 2 %}
+{% set numFload = 2.15 %}
+{% set bool = true %}
+
+<h3>Antes</h3>
+
+<p>{{ name }}</p>
+<p>{{ num }}</p>
+<p>{{ numFload }}</p>
+<p>{{ bool }}</p>
+
+
+{% 
+	set name, num, numFloat, bool = 
+	'Marcos Pereira Barbosa',
+	3,
+	3.5,
+	false
+%}
+
+
+<h3>Depois</h3>
+
+<p>{{ name }}</p>
+<p>{{ num }}</p>
+<p>{{ numFload }}</p>
+<p>{{ bool }}</p>
+
+
+{% set h1 %}
+	<h1>Título para reaproveitar</h1>
+{% endset %}
+
+{{ h1 }}
+{{ h1 }}
