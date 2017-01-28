@@ -34,11 +34,12 @@ $twig = new Twig_Environment($loader);
 // echo $twig->render('estruturas_condicionais.html.twig');
 // echo $twig->render('outros_operadores.html.twig');
 
-$cliente = new \SON\Cliente();
+// $cliente = new \SON\Cliente();
 
 // echo $twig->render('objects.html.twig', [
 // 	'cliente'=>$cliente
 // ]);
 
 
-echo $twig->render('funcoes.html.twig', ['cliente'=>$cliente]);
+// echo $twig->render('funcoes.html.twig', ['cliente'=>$cliente]);
+echo $twig->render('tests.html.twig');
