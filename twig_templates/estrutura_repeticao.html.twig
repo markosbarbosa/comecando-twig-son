@@ -1,0 +1,45 @@
+<h1>Com números</h1>
+{% set max = 500 %}
+
+{% for i in 0..max %}
+	{{ i }}
+{% endfor %}
+
+
+<h1>Com alfabeto</h1>
+{% for i in 'a'..'z' %}
+	{{ i }}
+{% endfor %}
+
+<h1>Com alfabeto</h1>
+{% for key, value in 'a'..'z' %}
+	<p>{{ key }} - {{ value }}</p>
+{% endfor %}
+
+
+{% set array = [1, 2, 3, 4, 5, 6, 7] %}
+
+<h1>Com array</h1>
+{% for key, value in array %}
+	<p>{{ key }} - {{ value }}</p>
+{% endfor %}
+
+
+{% set array = {'chave1': 'valor1', 'chave2': 'valor2'} %}
+
+<h1>Com array associativo</h1>
+{% for key, value in array %}
+	<p>{{ key }} - {{ value }}</p>
+{% endfor %}
+
+
+
+{% set array = [1, 2, 3] %}
+
+<h1>Com condição - mensagem para caso de array vazio</h1>
+{% for key, value in array %}
+	<p>{{ key }} - {{ value }}</p>
+{% else %}
+	<p>Array vazio</p>
+{% endfor %}
+
