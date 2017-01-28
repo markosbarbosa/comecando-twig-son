@@ -1,0 +1,24 @@
+<h1>Condicionais<h1>
+
+{% if 1 > 2 %}
+	{{ "1 é menor que 2" }}
+{% elseif 2 == 2 %}
+	{{ "2 é igual a 2" }}
+{% endif %}
+
+
+<h1>Operador ternário</h1>
+{{ 1 < 2 ? "Verdadeiro" : "Falso" }}
+
+<h1>Operador ternário reduzido</h1>
+
+{% set string = "School Of Net" %}
+<p>{{ string ? string : "Valor inválido" }}</p>
+<p>{{ string ?: "Valor inválido" }}</p>
+
+
+<h1>Operador ternário reduzido 2</h1>
+
+{% set string = "School Of Net" %}
+<p>{{ string ? "Valor válido" : "" }}</p>
+<p>{{ string ? "Valor válido" }}</p>

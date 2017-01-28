@@ -1,0 +1,65 @@
+{# Comentário do twig #}
+
+<h1>Operador ===</h1>
+{% if 2 is same as(2) %}
+	{{ 'Verdadeiro' }}
+{% else %}
+	{{ 'Falso' }}
+{% endif %}
+
+<h1>Starts with e ends with</h1>
+
+{% set inicio = 'School' %}
+
+<p>"School Of Net" começa com {{ inicio }} - 
+{% if 'School Of Net' starts with inicio %}
+	{{ 'Verdadeiro' }}
+{% else %}
+	{{ 'Falso' }}
+{% endif %}
+</p>
+
+{% set fim = 'Net' %}
+
+<p>"School Of Net" termina com {{ fim }} - 
+{% if 'School Of Net' ends with fim %}
+	{{ 'Verdadeiro' }}
+{% else %}
+	{{ 'Falso' }}
+{% endif %}
+</p>
+
+<h1>Operador in</h1>
+<p>
+{% if 10 in [10, 20] %}
+	{{ 'verdadeiro' }}
+{% else %}
+	{{ 'Falso' }}
+{% endif %}
+</p>
+
+{% if ' Of ' in 'School Of Net' %}
+	{{ 'verdadeiro' }}
+{% else %}
+	{{ 'Falso' }}
+{% endif %}
+
+<h1>Operadores lógicos</h1>
+
+<p>
+{% if ' Of ' in 'School Of Net' and 1 < 2 or 1 > 3 %}
+	{{ 'verdadeiro' }}
+{% else %}
+	{{ 'Falso' }}
+{% endif %}
+</p>
+
+
+<p>
+{% if not (1 > 3) %}
+	{{ 'verdadeiro' }}
+{% else %}
+	{{ 'Falso' }}
+{% endif %}
+</p>
+

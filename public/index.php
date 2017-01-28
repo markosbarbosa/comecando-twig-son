@@ -29,4 +29,6 @@ $twig = new Twig_Environment($loader);
 // echo $twig->render('variaveis.html.twig', [name=>'Marcos Barbosa', 'escola'=>'School Of Net']);
 // echo $twig->render('operadores.html.twig', [name=>'Marcos Barbosa', 'escola'=>'School Of Net']);
 // echo $twig->render('arrays.html.twig', [name=>'Marcos Barbosa', 'escola'=>'School Of Net']);
-echo $twig->render('estrutura_repeticao.html.twig', [name=>'Marcos Barbosa', 'escola'=>'School Of Net']);
+// echo $twig->render('estrutura_repeticao.html.twig', [name=>'Marcos Barbosa', 'escola'=>'School Of Net']);
+// echo $twig->render('estruturas_condicionais.html.twig', [name=>'Marcos Barbosa', 'escola'=>'School Of Net']);
+echo $twig->render('outros_operadores.html.twig', [name=>'Marcos Barbosa', 'escola'=>'School Of Net']);
