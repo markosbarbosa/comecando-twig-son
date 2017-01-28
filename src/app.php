@@ -26,6 +26,12 @@ $app['view.renderer'] = function () use ($app) {
     return new ViewRenderer($pathTemplates);
 };
 
+$app['twig'] = function() {
+    $loader = new Twig_Loader_Filesystem(__DIR__.'/../templates/twig');
+    return new Twig_Environment($loader);
+};
+
+
 $app->get('/create-table', function (Silex\Application $app) {
     $file = fopen(__DIR__ . '/../data/schema.sql', 'r');
     while ($line = fread($file, 4096)) {

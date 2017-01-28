@@ -2,11 +2,11 @@
 
 $site = $app['controllers_factory'];
 $site->get('/home', function () use ($app) {
-    return $app['view.renderer']->render('home');
+    return $app['twig']->render('home.html');
 });
 
 $site->get('/fale-conosco', function () use ($app) {
-    return "<h1>Fale Conosco</h1>";
+    return $app['twig']->render('fale-conosco.html');
 });
 
 
