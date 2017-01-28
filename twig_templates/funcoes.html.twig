@@ -1,0 +1,16 @@
+<h1>Constante do PHP</h1>
+{{ constant('PHP_BINARY') }}
+
+<h1>Constante do Classes</h1>
+{{ constant('SON\\Cliente::CLIENTE_CPF') }}
+{{ constant('CLIENTE_CPF', cliente) }}
+
+<h1>Função attribute</h1>
+{{ attribute(cliente, 'nome') }} - 
+{{ attribute(cliente, 'teste', ['Teste ID']) }} - {# Acessando função #}
+{{ attribute(cliente, 'getId') }}{# Acessando função #}
+
+
+<h1>Funão date</h1>
+{% set minha_data = date('now') %}
+{{ minha_data.format('d/m/Y') }}

@@ -7,6 +7,8 @@ class Cliente {
 	private $id;
 	private $nome;
 
+	const CLIENTE_CPF = "00000000000";
+
 
 	public function __construct() {
 		$this->id = 100;
@@ -18,6 +20,10 @@ class Cliente {
 		return $this->nome;
 	}
  
+	public function teste($id) {
+		return $id;
+	}
+
 
 	public function getId() {
 		return $this->id;
