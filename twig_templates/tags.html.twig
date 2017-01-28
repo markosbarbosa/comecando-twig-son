@@ -1,0 +1,16 @@
+{% do 3*3 %}
+<h1>Inclue</h1>
+{% include 'hello.html' %} - 
+{{ include('hello.html') }}
+
+<h1>Spaceless</h1>
+{% set h1 %}
+	<h1>
+		Título para reaproveitar
+		<a href="#">Link</a>
+	</h1>
+{% endset %}
+
+{% spaceless %}
+	{{ h1 }}
+{% endspaceless %}

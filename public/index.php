@@ -43,4 +43,5 @@ $twig = new Twig_Environment($loader);
 
 // echo $twig->render('funcoes.html.twig', ['cliente'=>$cliente]);
 // echo $twig->render('tests.html.twig');
-echo $twig->render('filters.html.twig');
+// echo $twig->render('filters.html.twig');
+echo $twig->render('tags.html.twig', ['cliente'=>new \SON\Cliente()]);
