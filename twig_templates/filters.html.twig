@@ -1,0 +1,22 @@
+<h1>Date</h1>
+{% set minha_data = date('now') %}
+<p>{{ minha_data|date('Y') }}</p>
+<p>{{ 'now'|date('Y') }}</p>
+<p>{{ '2001-01-01'|date('Y') }}</p>
+
+<h1>String</h1>
+<p>{{ 'Marcos Barbosa'|upper }}</p>
+<p>{{ 'Marcos Barbosa'|lower }}</p>
+<p>{{ 'marcos barbosa'|capitalize }}</p>
+<p>{{ 'marcos barbosa'|length }}</p>
+<p>{{ ' marcos barbosa '|trim|length }}</p>
+
+<h1>Array</h1>
+<p>{{ [1, 2, 3, 4, 5]|length }}</p>
+<p>{{ [1, 2, 3, 4, 5]|first }}</p>
+<p>{{ [1, 2, 3, 4, 5]|last }}</p>
+<p>
+{% for i in [5, 1, 50, 4, 7]|sort %}
+	{{ i }}
+{% endfor %}
+</p>
