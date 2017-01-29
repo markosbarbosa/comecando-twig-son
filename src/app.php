@@ -51,7 +51,7 @@ $app->mount('/admin', function($admin) use($app){
 $app->error(function(\Exception $e, Request $request, $code) use($app){
     switch ($code){
         case 404:
-            return $app['view.renderer']->render('errors/404', [
+            return $app['twig']->render('errors/404.html.twig', [
                 'message' => $e->getMessage()
             ]);
     }

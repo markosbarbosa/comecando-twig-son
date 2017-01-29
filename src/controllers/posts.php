@@ -4,7 +4,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 $post = $app['controllers_factory'];
 $post->get('/create', function () use ($app) {
-    return $app['view.renderer']->render('posts/create');
+    return $app['twig']->render('posts/create.html.twig');
 });
 
 $post->post('/create', function (Request $request) use ($app) {
@@ -36,7 +36,7 @@ $post->get('/edit/{id}', function ($id) use ($app) {
     if(!$post){
         $app->abort(404, "Post não encontrado!");
     }
-    return $app['view.renderer']->render('posts/edit', ['post' => $post]);
+    return $app['twig']->render('posts/edit.html.twig', ['post' => $post]);
 });
 
 $post->post('/edit/{id}', function (Request $request, $id) use ($app) {

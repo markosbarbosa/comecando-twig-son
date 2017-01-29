@@ -1,10 +1,12 @@
 {% extends 'layouts/layout.html.twig' %}
 
+{% block title %}Meus posts{% endblock %}
+
 {% block content %}
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>Meus posts</h1>
+            <h1>{{ block('title') }}</h1>
             <a class="btn btn-primary" href="/admin/posts/create">Criar post</a>
             <table class="table">
                 <thead>
