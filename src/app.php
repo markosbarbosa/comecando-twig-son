@@ -28,7 +28,17 @@ $app['view.renderer'] = function () use ($app) {
 
 $app['twig'] = function() {
     $loader = new Twig_Loader_Filesystem(__DIR__.'/../templates/twig');
-    return new Twig_Environment($loader);
+    
+    $twig = new Twig_Environment($loader, [
+        'debug' => false,
+        'cache' => __DIR__.'/../data/cache/twig'
+    ]);
+
+
+    $twig->addExtension(new Twig_Extension_Debug());
+
+    return $twig;
+
 };
 
 
