@@ -17,7 +17,7 @@ $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
         'host' => 'localhost',
         'dbname' => 'son_silex_basico',
         'user' => 'root',
-        'password' => 'root'
+        'password' => 'dev'
     ),
 ));
 

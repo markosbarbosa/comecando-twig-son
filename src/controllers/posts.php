@@ -23,7 +23,7 @@ $post->get('/', function () use ($app) {
     $db = $app['db'];
     $sql = "SELECT * FROM posts;";
     $posts = $db->fetchAll($sql);
-    return $app['view.renderer']->render('posts/list', [
+    return $app['twig']->render('posts/list.html.twig', [
         'posts' => $posts
     ]);
 });
